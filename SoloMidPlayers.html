@@ -12,9 +12,11 @@
 		<script src="js/jquery.scrollgress.min.js"></script>
 		<script src="js/jquery.scrolly.min.js"></script>
 		<script src="js/jquery.slidertron.min.js"></script>
+		<script src="js/graphData.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -56,54 +58,32 @@
 			<section id="main" class="wrapper style1" style="background: #333333; background-image: url('images/SoloMid-BIG.png'); ">
 				<header class="major">
 					<h2 style="color: #E4E4E4">Team SoloMid</h2>
-					<p style="color: #E4E4E4">Faucibus neque adipiscing mi lorem semper blandit</p>
+					<p style="color: #E4E4E4">Look at each players indiviual breakdown</p>
 				</header>
 				<div class="container" style="background: #EBEBE7">
 					<div class="row 150%">
-						<div class="8u 12u$(2)">
+						<div class="12u">
 
 							<!-- Content -->
-								<section id="content">
-									<a href="#" class="image fit"><img src="images\team pics\SoloMid.jfif" alt="" /></a>
-									<h3 style="color:#333333">Competitive History</h3>
-									<p style="color:#333333">Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at magna consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam.</p>
-									<h3 style="color:#333333">Brief Player Bio</h3>
-									<p style="color:#333333">In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus.</p>
-									<ul>
-										<li style="color:#333333">Faucibus orci lobortis ac adipiscing integer.</li>
-										<li style="color:#333333">Col accumsan arcu mi aliquet placerat.</li>
-										<li style="color:#333333">Lobortis vestibulum ut magna tempor massa nascetur.</li>
-										<li style="color:#333333">Blandit massa non blandit tempor interdum.</li>
-										<li style="color:#333333">Lacinia mattis arcu nascetur lobortis.</li>
-									</ul>
+								<section id="graph">
+									<canvas id="myChart"></canvas>
+
 								</section>
+								<script>
+								var choice = 1;
+								player1();
+
+								</script>
 
 						</div>
-						<div class="4u 12u$(2)">
+						<div class="12u">
+							<a href="" class="button big scrolly" onclick="nextChart()">Player 1</a>
+							<a href="" class="button big scrolly" onclick="nextChart()">Next Player</a>
+							<a href="" class="button big scrolly" onclick="nextChart()">Next Player</a>
+							<a href="" class="button big scrolly" onclick="nextChart()">Next Player</a>
+							<a href="" class="button big scrolly" onclick="nextChart()">Next Player</a>
 
-							<!-- Sidebar -->
-								<section id="sidebar">
-									<section>
-										<h3>About</h3>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit..</p>
-										<footer>
-											<ul class="actions">
-												<li><a href="#" class="button small alt">Learn More</a></li>
-											</ul>
-										</footer>
-									</section>
-									<hr />
-									<section>
-										<a href="#" class="image fit"><img src="images\team pics\SoloMid2.jpg" alt="" /></a>
-										<h3>In-Depth Player Analysis</h3>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-										<footer>
-											<ul class="actions">
-												<li><a href="SoloMidPlayers.html" class="button small alt">Analyse</a></li>
-											</ul>
-										</footer>
-									</section>
-								</section>
+
 
 						</div>
 					</div>
