@@ -16,6 +16,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
@@ -70,18 +71,73 @@
 
 								</section>
 								<script>
-								var choice = 1;
-								player1();
+								let myChart = document.getElementById('myChart').getContext('2d');
+
+						    let statChart = new Chart(myChart, {
+						      type:'bar', //bar... horizontal etc, pie, doughunt.
+						      data:{
+						        labels:['Accuracy', 'Attacking', 'Defence', 'Support'],
+						        datasets: [{
+						          label: 'Skill rating out of 20',
+						          data: [10, 10, 10, 10],
+											backgroundColor: [
+            						pattern.draw('square', '#ff6384'),
+						            pattern.draw('circle', '#36a2eb'),
+						            pattern.draw('diamond', '#cc65fe'),
+						            pattern.draw('triangle', '#ffce56'),
+											]
+						        }]
+						      },
+									options: {
+										scales: {
+							        yAxes: [{
+							            ticks: {
+							                beginAtZero: true
+							            }
+							        }]
+							    },
+									title: {
+
+										display: true,
+										text: 'Player 1',
+										fontSize: 24,
+									}
+								}
+						    })
 
 								</script>
 
 						</div>
 						<div class="12u">
-							<a href="" class="button big scrolly" onclick="nextChart()">Player 1</a>
-							<a href="" class="button big scrolly" onclick="nextChart()">Next Player</a>
-							<a href="" class="button big scrolly" onclick="nextChart()">Next Player</a>
-							<a href="" class="button big scrolly" onclick="nextChart()">Next Player</a>
-							<a href="" class="button big scrolly" onclick="nextChart()">Next Player</a>
+							<ul class="icons">
+								<a class="coolbutton" href='javascript:void();' onclick="updateChart()">Player One</a>
+								<a class="coolbutton" href='javascript:void();' onclick="updateChart2()">Player Two</a>
+								<a class="coolbutton" href='javascript:void();' onclick="updateChart3()">Player Three</a>
+								<a class="coolbutton" href='javascript:void();' onclick="updateChart4()">Player Four</a>
+								<a class="coolbutton" href='javascript:void();' onclick="updateChart5()">Player Five</a>
+							</ul>
+
+							<style media="screen">
+							.coolbutton
+							{
+								color: #494949 !important;
+								text-transform: uppercase;
+								text-decoration: none;
+								background: #ffffff;
+								padding: 20px;
+								border: 4px solid #494949 !important;
+								display: inline-block;
+								transition: all 0.4s ease 0s;
+								margin-top: 2%;
+								margin-right: 2%;
+							}
+							.icons
+							{
+								align-items: center;
+								display: flex;
+								justify-content: center;
+							}
+							</style>
 
 
 

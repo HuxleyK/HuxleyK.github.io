@@ -1,32 +1,61 @@
 
-function player1()
-{
-  dataset1 = ['1', '5', '5', '5'];
-  dataset = dataset1;
-  makeChart();
-}
-function player2()
-{
-  dataset2 = ['10', '5', '5', '5'];
-  dataset = dataset2;
-  makeChart();
-}
 
+  function updateChart()
+  {
+    statChart.data.datasets[0].data = [10,10,10,10];
+    statChart.data.datasets[0].backgroundColor = [
+    pattern.draw('square', '#ff6384'),
+    pattern.draw('circle', '#36a2eb'),
+    pattern.draw('diamond', '#cc65fe'),
+    pattern.draw('triangle', '#ffce56')],
+    statChart.options.title.text = 'Player 1';
+    statChart.update();
+  }
 
+  function updateChart2()
+  {
+    statChart.data.datasets[0].data = [5,6,20,4];
+    statChart.data.datasets[0].backgroundColor = [
+    pattern.draw('square', '#8DBF8B'),
+    pattern.draw('circle', '#F09856'),
+    pattern.draw('diamond', '#FADC9C'),
+    pattern.draw('triangle', '#ffce56')],
+    statChart.options.title.text = 'Player 2';
+    statChart.update();
+  }
 
-function makeChart()
-{
-    let myChart = document.getElementById('myChart').getContext('2d');
+  function updateChart3()
+  {
+    statChart.data.datasets[0].data = [20,18,1,5];
+    statChart.data.datasets[0].backgroundColor = [
+    pattern.draw('square', '#EFA8EA'),
+    pattern.draw('circle', '#18A4E0'),
+    pattern.draw('diamond', '#FADC9C'),
+    pattern.draw('triangle', '#97E5EF')],
+    statChart.options.title.text = 'Player 3';
+    statChart.update();
+  }
 
-    let statChart = new Chart(myChart, {
-      type:'bar', //bar... horizontal etc, pie, doughunt.
-      data:{
-        labels:['Accuracy', 'Attacking', 'Defence', 'Support'],
-        datasets:[{
-          label:'/20',
-          data : dataset
-        }]
-      },
+  function updateChart4()
+  {
+    statChart.data.datasets[0].data = [20,0,20,0];
+    statChart.data.datasets[0].backgroundColor = [
+    pattern.draw('square', '#AAD0D9'),
+    pattern.draw('circle', '#EED5D1'),
+    pattern.draw('diamond', '#A7BF2E'),
+    pattern.draw('triangle', '#F95A37')],
+    statChart.options.title.text = 'Player 4';
+    statChart.update();
+  }
 
-    })
+  function updateChart5()
+  {
+    statChart.data.datasets[0].data = [1,1,20,4];
+    statChart.data.datasets[0].backgroundColor = [
+    pattern.draw('square', '#ffce56'),
+    pattern.draw('circle', '#8DBF8B'),
+    pattern.draw('diamond', '#FADC9C'),
+    pattern.draw('triangle', '#18A4E0')],
+    statChart.options.title.text = 'Player 5';
+    statChart.update();
   }
