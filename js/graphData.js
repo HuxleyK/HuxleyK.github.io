@@ -2,25 +2,29 @@
 
   function updateChart()
   {
-    statChart.data.datasets[0].data = [10,10,10,10];
+    statChart.data.datasets[0].data = [385,330, 404, 440, 238];
     statChart.data.datasets[0].backgroundColor = [
-    pattern.draw('square', '#ff6384'),
-    pattern.draw('circle', '#36a2eb'),
-    pattern.draw('diamond', '#cc65fe'),
-    pattern.draw('triangle', '#ffce56')],
-    statChart.options.title.text = 'Player 1';
+	pattern.draw('square', '#ff6384'),
+	pattern.draw('circle', '#36a2eb'),
+	pattern.draw('diamond', '#cc65fe'),
+	pattern.draw('triangle', '#ffce56'),
+	pattern.draw('circle', '#ff6384')],
+    statChart.options.title.text = 'Average Gold Per Minute';
+	statChart.options.scales.yAxes[0].ticks.max = 500;
     statChart.update();
   }
 
   function updateChart2()
   {
-    statChart.data.datasets[0].data = [5,6,20,4];
+    statChart.data.datasets[0].data = [8.3,5.3,9.1,9.5,1.4];
     statChart.data.datasets[0].backgroundColor = [
     pattern.draw('square', '#8DBF8B'),
     pattern.draw('circle', '#F09856'),
     pattern.draw('diamond', '#FADC9C'),
-    pattern.draw('triangle', '#ffce56')],
-    statChart.options.title.text = 'Player 2';
+    pattern.draw('triangle', '#ffce56'),
+	pattern.draw('square', '#8DBF8B')],
+	statChart.options.title.text = 'CS Per Minute';
+    statChart.options.scales.yAxes[0].ticks.max = 10;
     statChart.update();
   }
 

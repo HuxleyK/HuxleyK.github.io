@@ -76,15 +76,16 @@
 						    let statChart = new Chart(myChart, {
 						      type:'bar', //bar... horizontal etc, pie, doughunt.
 						      data:{
-						        labels:['Accuracy', 'Attacking', 'Defence', 'Support'],
+						        labels:['Broken Blade', 'Akaadian', 'Bjergsen', 'Zven', 'Smoothie'],
 						        datasets: [{
-						          label: 'Skill rating out of 20',
-						          data: [10, 10, 10, 10],
+						          label: 'GPM',
+						          data: [385,330, 404, 440, 238],
 											backgroundColor: [
             						pattern.draw('square', '#ff6384'),
 						            pattern.draw('circle', '#36a2eb'),
 						            pattern.draw('diamond', '#cc65fe'),
 						            pattern.draw('triangle', '#ffce56'),
+									pattern.draw('circle', '#ff6384'),
 											]
 						        }]
 						      },
@@ -93,17 +94,18 @@
 							        yAxes: [{
 							            ticks: {
 							                beginAtZero: true,
-											max: 20,
+											max: 500,
 							            }
 							        }]
 							    },
 									title: {
 
 										display: true,
-										text: 'Player 1',
+										text: 'Average Gold Per Minute',
 										fontSize: 24,
 									}
 								}
+								
 						    })
 
 								</script>
@@ -111,9 +113,9 @@
 						</div>
 						<div class="12u">
 							<ul class="icons">
-								<a class="coolbutton" href='javascript:void();' onclick="updateChart()">Player One</a>
-								<a class="coolbutton" href='javascript:void();' onclick="updateChart2()">Player Two</a>
-								<a class="coolbutton" href='javascript:void();' onclick="updateChart3()">Player Three</a>
+								<a class="coolbutton" href='javascript:void();' onclick="updateChart()">Average Gold Per Min</a>
+								<a class="coolbutton" href='javascript:void();' onclick="updateChart2()">Average CS Per Min</a>
+								<a class="coolbutton" href='javascript:void();' onclick="updateChart3()">Average Gold Per Min</a>
 								<a class="coolbutton" href='javascript:void();' onclick="updateChart4()">Player Four</a>
 								<a class="coolbutton" href='javascript:void();' onclick="updateChart5()">Player Five</a>
 							</ul>
