@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title> Cloud 9 </title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.scrollgress.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.slidertron.min.js"></script>
+		<script src="js/graphDataCloud9.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+			<link rel="stylesheet" href="css\SoloMid.css"/>
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+		<h1><a href="index.html"><span>Cloud 9</span></a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="" class="icon fa-angle-down">Teams</a>
+							<ul>
+								<li><a href="left-sidebar.html">100 Thieves</a></li>
+								<li><a href="right-sidebar.html">Cloud 9</a></li>
+								<li><a href="no-sidebar.html">Counter Logic</a></li>
+								<li><a href="left-sidebar.html">Dignitas</a></li>
+								<li><a href="right-sidebar.html">Evil Geniuses</a></li>
+								<li><a href="no-sidebar.html">Fly Quest</a></li>
+								<li><a href="left-sidebar.html">Golden Guardians</a></li>
+								<li><a href="right-sidebar.html">Immortals</a></li>
+								<li><a href="no-sidebar.html">SoloMid</a></li>
+								<li><a href="no-sidebar.html">Team Liquid</a></li>
+							</ul>
+						</li>
+						<li><a href="elements.html">Compare</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Main -->
+			<section id="main" class="wrapper style1" style="background: #F7F7F7; background-image: url('images/team/Cloud9.png'); ">
+				<header class="major">
+					<h2 style="color: #000000">Cloud 9</h2>
+					<p style="color: #000000">Look at each players indiviual breakdown</p>
+				</header>
+				<div class="container" style="background: #EBEBE7">
+					<div class="row 150%">
+						<div class="12u">
+
+							<!-- Content -->
+								<section id="graph">
+									<canvas id="myChart"></canvas>
+
+								</section>
+								<script>
+								let myChart = document.getElementById('myChart').getContext('2d');
+
+						    let statChart = new Chart(myChart, {
+						      type:'bar', //bar... horizontal etc, pie, doughunt.
+						      data:{
+						        labels:['Licorice', 'Blaber', 'Nisqy', 'Zven', 'Vulcan'],
+						        datasets: [{
+						          label: 'GPM',
+						          data: [420,330, 404, 440, 238],
+											backgroundColor: [
+            						pattern.draw('square', '#ff6384'),
+						            pattern.draw('circle', '#36a2eb'),
+						            pattern.draw('diamond', '#cc65fe'),
+						            pattern.draw('triangle', '#ffce56'),
+									pattern.draw('circle', '#ff6384'),
+											]
+						        }]
+						      },
+									options: {
+										scales: {
+							        yAxes: [{
+							            ticks: {
+							                beginAtZero: true,
+											max: 500,
+							            }
+							        }]
+							    },
+									title: {
+
+										display: true,
+										text: 'Average Gold Per Minute',
+										fontSize: 24,
+									}
+								}
+
+						    })
+
+								</script>
+
+						</div>
+						<div class="12u">
+							<ul class="icons">
+								<a class="coolbutton" href='javascript:void();' onclick="updateChart()">Average Gold Per Min</a>
+								<a class="coolbutton" href='javascript:void();' onclick="updateChart2()">Average CS Per Min</a>
+								<a class="coolbutton" href='javascript:void();' onclick="updateChart3()">Average Gold Per Min</a>
+								<a class="coolbutton" href='javascript:void();' onclick="updateChart4()">Player Four</a>
+								<a class="coolbutton" href='javascript:void();' onclick="updateChart5()">Player Five</a>
+							</ul>
+
+							<style media="screen">
+							.coolbutton
+							{
+								color: #494949 !important;
+								text-transform: uppercase;
+								text-decoration: none;
+								background: #ffffff;
+								padding: 20px;
+								border: 4px solid #494949 !important;
+								display: inline-block;
+								transition: all 0.4s ease 0s;
+								margin-top: 2%;
+								margin-right: 2%;
+							}
+							.icons
+							{
+								align-items: center;
+								display: flex;
+								justify-content: center;
+							}
+							</style>
+
+
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+					<li><a href="#" class="icon fa-envelope"><span class="label">Envelope</span></a></li>
+				</ul>
+				<ul class="menu">
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">Terms of Use</a></li>
+					<li><a href="#">Privacy</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</footer>
+
+	</body>
+</html>
