@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title> Counter Logic </title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.scrollgress.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.slidertron.min.js"></script>
+		<script src="js/graphDataCounterLogic.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/algo.js" charset="utf-8"></script>
+    <script src="js/jungle.js" charset="utf-8"></script>
+    <script src="js/Top.js" charset="utf-8"></script>
+    <script src="js/Bot.js" charset="utf-8"></script>
+    <script src="js/Mid.js" charset="utf-8"></script>
+    <script src="js/Support.js" charset="utf-8"></script>
+	<script src="js/one.js" charset="utf-8"></script>
+	<script src="js/update.js" charset="utf-8"></script>
+	<link href="js/jquery.bracket.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+			<link rel="stylesheet" href="css\SoloMid.css"/>
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+		<h1><a href="index.html"><span>Counter Logic</span></a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="" class="icon fa-angle-down">Teams</a>
+							<ul>
+								<li><a href="left-sidebar.html">100 Thieves</a></li>
+								<li><a href="right-sidebar.html">Cloud 9</a></li>
+								<li><a href="no-sidebar.html">Counter Logic</a></li>
+								<li><a href="left-sidebar.html">Dignitas</a></li>
+								<li><a href="right-sidebar.html">Evil Geniuses</a></li>
+								<li><a href="no-sidebar.html">Fly Quest</a></li>
+								<li><a href="left-sidebar.html">Golden Guardians</a></li>
+								<li><a href="right-sidebar.html">Immortals</a></li>
+								<li><a href="no-sidebar.html">SoloMid</a></li>
+								<li><a href="no-sidebar.html">Team Liquid</a></li>
+							</ul>
+						</li>
+						<li><a href="elements.html">Compare</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Main -->
+			<section id="main" class="wrapper style1" style="background: #333333; background-image: url('images/team/Counter_Logic.png'); ">
+				<header class="major">
+					<h2 style="color: #E4E4E4">Counter Logic</h2>
+					<p style="color: #E4E4E4">Look at each players indiviual breakdown</p>
+				</header>
+				<div class="container" style="background: #EBEBE7">
+					<div class="row 150%">
+						<div class="12u">
+
+							<!-- Content -->
+								<section id="graph" style="overflow: initial">
+									<div>
+									<canvas id="myChart"></canvas>
+								</div>
+
+								</section>
+
+								<div class="tournament">
+						      <script src="js/jquery-3.4.1.min.js"></script>
+							  <script src="js/jquery.bracket.min.js"></script>
+							  <script>
+								var minData = {
+									teams : [
+										["100T","Cloud9"],
+										["CLogic","Dignitas"],
+										["EvilGeniuses","FlyQuest"],
+										["GoldenGuardians","Immortals"]
+									],
+									results : [
+										[[1,4], [2,4], [3,6], [3,1]],
+										[[2,1], [3,4]],
+										[[1,2], [4,0]
+										]
+									]
+								}
+								$('.tournament').bracket({
+									init: minData
+								});
+								</script>
+
+
+						    </div>
+
+
+
+
+							<section>
+								<button class="button" style="margin-top: 5%" onClick="updateBracket()">CLICK ME</button>
+							<label for="OneOne">Game One, Team One</label>
+
+							<select id="OneOne">
+							  <option value="OneT">OneT</option>
+							  <option value="Cloud9">Cloud9</option>
+							  <option value="CLogic">CLogic</option>
+							  <option value="Dignitas">Dignitas</option>
+							  <option value="Immortals">Immortals</option>
+							  <option value="EvilGeniuses">EvilGeniuses</option>
+							  <option value="GoldenGuardians">GoldenGuardians</option>
+							  <option value="FlyQuest">FlyQuest</option>
+							  <option value="Liquid">Liquid</option>
+							  <option value="SoloMid" selected>SoloMid</option>
+							</select>
+
+							<label for="OneTwo">Game One, Team Two</label>
+
+							<select id="OneTwo">
+							  <option value="OneT">OneT</option>
+							  <option value="Cloud9">Cloud9</option>
+							  <option value="CLogic">CLogic</option>
+							  <option value="Dignitas">Dignitas</option>
+							  <option value="Immortals">Immortals</option>
+							  <option value="EvilGeniuses">EvilGeniuses</option>
+							  <option value="GoldenGuardians">GoldenGuardians</option>
+							  <option value="FlyQuest">FlyQuest</option>
+							  <option value="Liquid">Liquid</option>
+							  <option value="SoloMid" selected>SoloMid</option>
+							</select>
+							<section>
+
+							<section>
+							<label for="TwoOne">Game Two, Team One</label>
+
+							<select id="TwoOne">
+							  <option value="OneT">OneT</option>
+							  <option value="Cloud9">Cloud9</option>
+							  <option value="CLogic">CLogic</option>
+							  <option value="Dignitas">Dignitas</option>
+							  <option value="Immortals">Immortals</option>
+							  <option value="EvilGeniuses">EvilGeniuses</option>
+							  <option value="GoldenGuardians">GoldenGuardians</option>
+							  <option value="FlyQuest">FlyQuest</option>
+							  <option value="Liquid">Liquid</option>
+							  <option value="SoloMid" selected>SoloMid</option>
+							</select>
+
+							<label for="TwoTwo">Game Two, Team Two</label>
+
+							<select id="TwoTwo">
+							  <option value="OneT">OneT</option>
+							  <option value="Cloud9">Cloud9</option>
+							  <option value="CLogic">CLogic</option>
+							  <option value="Dignitas">Dignitas</option>
+							  <option value="Immortals">Immortals</option>
+							  <option value="EvilGeniuses">EvilGeniuses</option>
+							  <option value="GoldenGuardians">GoldenGuardians</option>
+							  <option value="FlyQuest">FlyQuest</option>
+							  <option value="Liquid">Liquid</option>
+							  <option value="SoloMid" selected>SoloMid</option>
+							</select>
+							</section>
+
+							<section>
+							<label for="ThreeOne">Game Three, Team One</label>
+							<select id="ThreeOne">
+							  <option value="OneT">OneT</option>
+							  <option value="Cloud9">Cloud9</option>
+							  <option value="CLogic">CLogic</option>
+							  <option value="Dignitas">Dignitas</option>
+							  <option value="Immortals">Immortals</option>
+							  <option value="EvilGeniuses">EvilGeniuses</option>
+							  <option value="GoldenGuardians">GoldenGuardians</option>
+							  <option value="FlyQuest">FlyQuest</option>
+							  <option value="Liquid">Liquid</option>
+							  <option value="SoloMid" selected>SoloMid</option>
+							</select>
+
+							<label for="ThreeTwo">Game Three, Team Two</label>
+
+							<select id="ThreeTwo">
+							  <option value="OneT">OneT</option>
+							  <option value="Cloud9">Cloud9</option>
+							  <option value="CLogic">CLogic</option>
+							  <option value="Dignitas">Dignitas</option>
+							  <option value="Immortals">Immortals</option>
+							  <option value="EvilGeniuses">EvilGeniuses</option>
+							  <option value="GoldenGuardians">GoldenGuardians</option>
+							  <option value="FlyQuest">FlyQuest</option>
+							  <option value="Liquid">Liquid</option>
+							  <option value="SoloMid" selected>SoloMid</option>
+							</select>
+							</section>
+
+							<section>
+							<label for="FourOne">Game Four, Team One</label>
+
+							<select id="FourOne">
+							  <option value="OneT">OneT</option>
+							  <option value="Cloud9">Cloud9</option>
+							  <option value="CLogic">CLogic</option>
+							  <option value="Dignitas">Dignitas</option>
+							  <option value="Immortals">Immortals</option>
+							  <option value="EvilGeniuses">EvilGeniuses</option>
+							  <option value="GoldenGuardians">GoldenGuardians</option>
+							  <option value="FlyQuest">FlyQuest</option>
+							  <option value="Liquid">Liquid</option>
+							  <option value="SoloMid" selected>SoloMid</option>
+							</select>
+
+							<label for="FourTwo">Game Four, Team Two</label>
+
+							<select id="FourTwo">
+							  <option value="OneT">OneT</option>
+							  <option value="Cloud9">Cloud9</option>
+							  <option value="CLogic">CLogic</option>
+							  <option value="Dignitas">Dignitas</option>
+							  <option value="Immortals">Immortals</option>
+							  <option value="EvilGeniuses">EvilGeniuses</option>
+							  <option value="GoldenGuardians">GoldenGuardians</option>
+							  <option value="FlyQuest">FlyQuest</option>
+							  <option value="Liquid">Liquid</option>
+							  <option value="SoloMid" selected>SoloMid</option>
+							</select>
+
+
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+					<li><a href="#" class="icon fa-envelope"><span class="label">Envelope</span></a></li>
+				</ul>
+				<ul class="menu">
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">Terms of Use</a></li>
+					<li><a href="#">Privacy</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</footer>
+
+	</body>
+</html>
