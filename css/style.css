@@ -268,6 +268,12 @@
 			margin-right: auto;
 			text-align: center;
 		}
+		@media only screen and (max-width: 767px){
+		
+		.box.post p{
+			display:none
+		}
+		}
 			.box.post .image:first-child {
 				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0;
