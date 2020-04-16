@@ -267,11 +267,15 @@
 			margin-left: auto;
 			margin-right: auto;
 			text-align: center;
+			height: 750px;
 		}
 		@media only screen and (max-width: 767px){
 		
 		.box.post p{
 			display:none
+		}
+		.box.post{
+			height: 300px;
 		}
 		}
 			.box.post .image:first-child {
@@ -283,7 +287,12 @@
 				.box.post .image:first-child img {
 					border-bottom-left-radius: 0;
 					border-bottom-right-radius: 0;
+					height: 184px;
+					width: 184px;
 				}
+		#immortals.box.post {
+			height: 450px;
+		}
 /* Icon */
 	.icon {
 		text-decoration: none;
