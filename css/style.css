@@ -277,6 +277,9 @@
 		.box.post{
 			height: 300px;
 		}
+		.button.small.alt{
+			display: none;
+		}
 		}
 			.box.post .image:first-child {
 				border-bottom-left-radius: 0;
