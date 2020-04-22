@@ -1,6 +1,6 @@
 @import url(font-awesome.min.css);
 @import url("http://fonts.googleapis.com/css?family=Lato:300,700");
-/* Basic */
+
 	body {
 		background: #fff;
 	}
@@ -270,7 +270,7 @@
 			height: 750px;
 		}
 		@media only screen and (max-width: 767px){
-		
+
 		.box.post p{
 			display:none
 		}
