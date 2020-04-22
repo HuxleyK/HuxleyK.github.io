@@ -1,7 +1,7 @@
 function algo(teamone, teamtwo)
 {
-  var OneTTop = [385,8,4,64];
-  var OneTjungle = [346,5,3,51]; // Gold per min , CS per min, kills, win perc
+  var OneTTop = [385,8,4,64]; // Gold per min , CS per min, kills, win perc
+  var OneTjungle = [346,5,3,51];
   var OneTMid = [406,9,5,62];
   var OneTBot = [428,10,5,52];
   var OneTSupport = [266,1,5,62];
