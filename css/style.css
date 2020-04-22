@@ -293,6 +293,17 @@
 		#immortals.box.post {
 			height: 450px;
 		}
+		.button.big{
+			display: none;
+
+		}
+		.wrapper.style3{
+			display: none;
+
+		}
+		#navPanel .link.depth-0{
+			display: none;
+		}
 /* Icon */
 	.icon {
 		text-decoration: none;
