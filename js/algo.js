@@ -1,64 +1,64 @@
 function algo(teamone, teamtwo)
 {
-  var OneTjungle = [8,5,7,10]; // Gold per min , CS per min, kills, win perc
-  var OneTTop = [10,10,10,10];
-  var OneTMid = [10,10,10,10];
-  var OneTBot = [10,10,10,10];
-  var OneTSupport = [10,10,10,10];
+  var OneTTop = [385,8,4,64];
+  var OneTjungle = [346,5,3,51]; // Gold per min , CS per min, kills, win perc
+  var OneTMid = [406,9,5,62];
+  var OneTBot = [428,10,5,52];
+  var OneTSupport = [266,1,5,62];
 
-  var Cloud9jungle = [9,4,9,5];
-  var Cloud9Top = [5,5,5,5];
-  var Cloud9Mid = [5,5,5,5];
-  var Cloud9Bot = [5,5,5,5];
-  var Cloud9Support = [5,5,5,5];
+  var Cloud9Top = [396,9,3,60];
+  var Cloud9jungle = [364,6,4,72];
+  var Cloud9Mid = [395,9,5,56];
+  var Cloud9Bot = [429,10,5,61];
+  var Cloud9Support = [247,1,4,50];
 
-  var CLogicjungle = [7,9,8,3];
-  var CLogicTop = [9,8,5,6];
-  var ClogicMid = [4,5,7,6];
-  var OneTBot = [1,2,7,4];
-  var OneTSupport = [2,3,5,5];
-  
-  var Dignjungle = [0,0,0,0];
-  var DignTop = [0,0,0,0];
-  var DignMid = [0,0,0,0];
-  var DignBot = [0,0,0,0];
-  var DignSupport = [0,0,0,0];
-  
-  var SoloMidjungle = [0,0,0,0];
-  var SoloMidTop = [0,0,0,0];
-  var SoloMidMid = [0,0,0,0];
-  var SoloMidBot = [0,0,0,0];
-  var SoloMidSupport = [0,0,0,0];
-  
-  var Liquidjungle = [0,0,0,0];
-  var LiquidTop = [0,0,0,0];
-  var LiquidMid = [0,0,0,0];
-  var LiquidBot = [0,0,0,0];
-  var LiquidSupport = [0,0,0,0];
-  
-  var Flyjungle = [0,0,0,0];
-  var FlyTop = [0,0,0,0];
-  var FlyMid = [0,0,0,0];
-  var FlyBot = [0,0,0,0];
-  var FlySupport = [0,0,0,0];
-  
-  var Goldenjungle = [0,0,0,0];
-  var GoldenTop = [0,0,0,0];
-  var GoldenMid = [0,0,0,0];
-  var GoldenBot = [0,0,0,0];
-  var GoldenSupport = [0,0,0,0];
-  
-  var Eviljungle = [0,0,0,0];
-  var EvilTop = [0,0,0,0];
-  var EvilMid = [0,0,0,0];
-  var EvilBot = [0,0,0,0];
-  var EvilSupport = [0,0,0,0];
-  
-  var Immortaljungle = [0,0,0,0];
-  var ImmortalTop = [0,0,0,0];
-  var ImmortalMid = [0,0,0,0];
-  var ImmortalBot = [0,0,0,0];
-  var ImmortalSupport = [0,0,0,0];
+  var CLogicTop = [398,8,3,56];
+  var CLogicjungle = [330,5,3,53];
+  var ClogicMid = [401,9,3,55];
+  var OneTBot = [413,9,4,51];
+  var OneTSupport = [253,1,4,56];
+
+  var DignTop = [403,8,3,62];
+  var Dignjungle = [318,5,3,52];
+  var DignMid = [395,9,4,45];
+  var DignBot = [398,9,3,27];
+  var DignSupport = [253,1,3,53];
+
+  var SoloMidTop = [385,8,4,64];
+  var SoloMidjungle = [346,5,3,51];
+  var SoloMidMid = [406,9,5,62];
+  var SoloMidBot = [428,10,5,52];
+  var SoloMidSupport = [266,1,5,62];
+
+  var LiquidTop = [373,8,4,63];
+  var Liquidjungle = [355,6,3,64];
+  var LiquidMid = [418,9,5,60];
+  var LiquidBot = [431,9,5,63];
+  var LiquidSupport = [279,3,4,59];
+
+  var FlyTop = [448,10,7,63];
+  var Flyjungle = [319,4,5,49];
+  var FlyMid = [401,9,4,54];
+  var FlyBot = [407,9,4,56];
+  var FlySupport = [248,1,4,42];
+
+  var Goldenjungle = [393,8,4,60];
+  var GoldenTop = [344,5,4,69];
+  var GoldenMid = [398,9,4,51];
+  var GoldenBot = [451,10,5,60];
+  var GoldenSupport = [389,8,3,49];
+
+  var Eviljungle = [385,8,4,66];
+  var EvilTop = [335,4,3,62];
+  var EvilMid = [405,9,3,54];
+  var EvilBot = [425,9,6,64];
+  var EvilSupport = [262,1,4,60];
+
+  var Immortaljungle = [358,7,3,57];
+  var ImmortalTop = [334,5,4,57];
+  var ImmortalMid = [410,9,4,61];
+  var ImmortalBot = [404,9,4,48];
+  var ImmortalSupport = [260,1,3,41];
 
 
   var BaseJungle = [0,0,0,0];
@@ -108,7 +108,7 @@ function algo(teamone, teamtwo)
 	  BaseBot = ClogicBot;
 	  BaseSupport = CLogicSupport;
 	}
-	
+
 	else if(t1select == "Dignitas")
 	{
 	  BaseJungle = DignJungle;
@@ -117,7 +117,7 @@ function algo(teamone, teamtwo)
 	  BaseBot = DignBot;
 	  BaseSupport = DignSupport;
 	}
-	
+
 	else if(t1select == "Immortals")
 	{
 	  BaseJungle = Immortaljungle;
@@ -126,7 +126,7 @@ function algo(teamone, teamtwo)
 	  BaseBot = ImmortalBot;
 	  BaseSupport = ImmortalSupport;
 	}
-	
+
 	else if(t1select == "EvilGeniuses")
 	{
 	  BaseJungle = Eviljungle;
@@ -135,7 +135,7 @@ function algo(teamone, teamtwo)
 	  BaseBot = EvilBot;
 	  BaseSupport = EvilSupport;
 	}
-	
+
 	else if(t1select == "GoldenGuardians")
 	{
 	  BaseJungle = Goldenjungle;
@@ -144,7 +144,7 @@ function algo(teamone, teamtwo)
 	  BaseBot = GoldenBot;
 	  BaseSupport = GoldenSupport;
 	}
-	
+
 	else if(t1select == "FlyQuest")
 	{
 	  BaseJungle = Flyjungle;
@@ -153,7 +153,7 @@ function algo(teamone, teamtwo)
 	  BaseBot = FlyBot;
 	  BaseSupport = FlySupport;
 	}
-	
+
 	else if(t1select == "Liquid")
 	{
 	  BaseJungle = Liquidjungle;
@@ -162,7 +162,7 @@ function algo(teamone, teamtwo)
 	  BaseBot = LiquidBot;
 	  BaseSupport = LiquidSupport;
 	}
-	
+
 	else if(t1select == "SoloMid")
 	{
 	  BaseJungle = SoloMidjungle;
@@ -198,7 +198,7 @@ function algo(teamone, teamtwo)
 	  Base2Bot = ClogicBot;
 	  Base2Support = CLogicSupport;
 	}
-	
+
 	else if(t2select == "Dignitas")
 	{
 	  Base2Jungle = DignJungle;
@@ -207,7 +207,7 @@ function algo(teamone, teamtwo)
 	  Base2Bot = DignBot;
 	  Base2Support = DignSupport;
 	}
-	
+
 	else if(t2select == "Immortals")
 	{
 	  Base2Jungle = Immortaljungle;
@@ -216,7 +216,7 @@ function algo(teamone, teamtwo)
 	  Base2Bot = ImmortalBot;
 	  Base2Support = ImmortalSupport;
 	}
-	
+
 	else if(t2select == "EvilGeniuses")
 	{
 	  Base2Jungle = Eviljungle;
@@ -225,7 +225,7 @@ function algo(teamone, teamtwo)
 	  Base2Bot = EvilBot;
 	  Base2Support = EvilSupport;
 	}
-	
+
 	else if(t2select == "GoldenGuardians")
 	{
 	  Base2Jungle = Goldenjungle;
@@ -234,7 +234,7 @@ function algo(teamone, teamtwo)
 	  Base2Bot = GoldenBot;
 	  Base2Support = GoldenSupport;
 	}
-	
+
 	else if(t2select == "FlyQuest")
 	{
 	  Base2Jungle = Flyjungle;
@@ -243,7 +243,7 @@ function algo(teamone, teamtwo)
 	  Base2Bot = FlyBot;
 	  Base2Support = FlySupport;
 	}
-	
+
 	else if(t2select == "Liquid")
 	{
 	  Base2Jungle = Liquidjungle;
@@ -252,7 +252,7 @@ function algo(teamone, teamtwo)
 	  Base2Bot = LiquidBot;
 	  Base2Support = LiquidSupport;
 	}
-	
+
 	else if(t2select == "SoloMid")
 	{
 	  Base2Jungle = SoloMidjungle;
@@ -261,7 +261,7 @@ function algo(teamone, teamtwo)
 	  Base2Bot = SoloMidBot;
 	  Base2Support = SoloMidSupport;
 	}
-	
+
 	var TeamOneTotal = 0;
 	var TeamTwoTotal = 0;
 
@@ -274,7 +274,7 @@ function algo(teamone, teamtwo)
 	{
 		TeamTwoTotal++;
 	}
-	
+
 	topWinner = compareTop(BaseTop, Base2Top);
 	if(topWinner == 1)
 	{
@@ -284,7 +284,7 @@ function algo(teamone, teamtwo)
 	{
 		TeamTwoTotal++;
 	}
-	
+
 	midWinner = compareMid(BaseMid, Base2Mid);
 	if(midWinner == 1)
 	{
@@ -294,7 +294,7 @@ function algo(teamone, teamtwo)
 	{
 		TeamTwoTotal++;
 	}
-	
+
 	botWinner = compareBot(BaseBot, Base2Bot);
 	if(botWinner == 1)
 	{
@@ -304,7 +304,7 @@ function algo(teamone, teamtwo)
 	{
 		TeamTwoTotal++;
 	}
-	
+
 	supportWinner = compareSupport(BaseSupport, Base2Support);
 	if(supportWinner == 1)
 	{
@@ -314,10 +314,6 @@ function algo(teamone, teamtwo)
 	{
 		TeamTwoTotal++;
 	}
-	
+
 	return TeamOneTotal;
 }
-
-
-
-

@@ -2,7 +2,7 @@
 
   function updateChart()//Average Gold Per Minute
   {
-    statChart.data.datasets[0].data = [385,346, 406, 428, 266];
+    statChart.data.datasets[0].data = [385, 346, 406, 428, 266];
     statChart.data.datasets[0].backgroundColor = [
 	pattern.draw('square', '#ff6384'),
 	pattern.draw('circle', '#36a2eb'),
